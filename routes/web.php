@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('tasks', TaskController::class);
+Route::put('/tasks/{id}', [TaskController::class, 'update'])->name('tasks.update');
+

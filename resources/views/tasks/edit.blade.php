@@ -20,16 +20,19 @@
 
         <div class="mb-3">
             <label for="due_date" class="form-label">Due Date</label>
-            <input type="date" class="form-control" id="due_date" name="due_date" value="{{ $task->due_date }}">
+            <input type="datetime-local" class="form-control" id="due_date" name="due_date"
+            value="{{ old('due_date', isset($task) ? date('Y-m-d\TH:i', strtotime($task->due_date)) : '') }}">
+
         </div>
 
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="completed" name="completed" {{ $task->completed ? 'checked' : '' }}>
-            <label for="completed" class="form-check-label">Completed</label>
+            <label>Completed</label>
+            <input type="checkbox" name="completed" value="1" {{ $task->completed ? 'checked' : '' }}>
         </div>
 
-        <button type="submit" class="btn btn-success">Update Task</button>
-        <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back</a>
+        <button type="submit" class="btn btn-success"><i class="fa-solid fa-cloud-arrow-up"></i> Update Task</button>
+        <a href="{{ route('tasks.index') }}" class="btn btn-secondary"><i class="fa-solid fa-backward-step"></i> Back</a>
     </form>
 </div>
 @endsection

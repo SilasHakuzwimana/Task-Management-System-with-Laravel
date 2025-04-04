@@ -9,6 +9,6 @@
     <p><strong>Due Date:</strong> {{ $task->due_date }}</p>
     <p><strong>Status:</strong> {{ $task->completed ? 'Completed' : 'Pending' }}</p>
 
-    <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back</a>
+    <a href="{{ route('tasks.index') }}" class="btn btn-secondary"><i class="fa-solid fa-backward-step"></i> Back</a>
 </div>
 @endsection

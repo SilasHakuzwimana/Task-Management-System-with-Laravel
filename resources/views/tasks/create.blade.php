@@ -19,11 +19,11 @@
 
         <div class="mb-3">
             <label for="due_date" class="form-label">Due Date</label>
-            <input type="date" class="form-control" id="due_date" name="due_date">
+            <input type="datetime-local" class="form-control" id="due_date" name="due_date">
         </div>
 
-        <button type="submit" class="btn btn-success">Save Task</button>
-        <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back</a>
+        <button type="submit" class="btn btn-success"><i class="fa-solid fa-folder-plus"></i> Save Task</button>
+        <a href="{{ route('tasks.index') }}" class="btn btn-secondary"><i class="fa-solid fa-backward-step"></i> Back</a>
     </form>
 </div>
 @endsection

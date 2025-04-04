@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','description','due_date']; //Allow Mass assignment
+    protected $fillable = ['title','description','due_date','completed']; //Allow Mass assignment
 }
